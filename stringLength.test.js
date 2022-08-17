@@ -1,3 +1,4 @@
+const { expect } = require('expect')
 const stringLength = require('./stringLength')
 
 test('String length is', () => {
@@ -5,9 +6,21 @@ test('String length is', () => {
 })
 
 test('String length is', () => {
-    expect(stringLength('b')).toBe(1)
+    expect(stringLength('bot')).toBe(3)
 })
 
 test('String length is', () => {
     expect(stringLength('anonymous')).toBe(9)
+})
+
+test('String length more than 10 char', () => {
+    expect(() => {
+        stringLength('ethnological')
+    }).toThrow();
+})
+
+test('No String', () => {
+    expect(() => {
+        stringLength('')
+    }).toThrow();
 })

@@ -7,3 +7,7 @@ test('Reverse String is', () => {
 test('Reverse String is', () => {
     expect(reverseString('least')).toBe('tsael')
 })
+
+test('Reverse String is', () => {
+    expect(reverseString('Hello World')).toBe('dlroW olleH')
+})
